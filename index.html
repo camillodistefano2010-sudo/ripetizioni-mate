@@ -3,162 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ripetizioni di Matematica e Fisica con Camillo</title>
+    <title>Mate e Fisica - Ripetizioni con Camillo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap');
         
+        :root {
+            --beige-light: #f5f5f4;
+            --brown-warm: #78350f;
+            --brown-dark: #44403c;
+        }
+
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--beige-light);
+            color: var(--brown-dark);
             scroll-behavior: smooth;
         }
 
         .hero-section {
-            background-image: linear-gradient(rgba(30, 64, 175, 0.85), rgba(30, 64, 175, 0.85)), url('download.jpg');
+            background-image: linear-gradient(rgba(68, 64, 60, 0.7), rgba(68, 64, 60, 0.7)), url('gargantua-black.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
 
-        .btn-vibrant {
-            background: #facc15;
-            color: #1e3a8a;
+        .btn-primary {
+            background-color: var(--brown-warm);
+            color: white;
             transition: all 0.3s ease;
         }
 
-        .btn-vibrant:hover {
-            background: #fde047;
-            transform: scale(1.05);
+        .btn-primary:hover {
+            background-color: #92400e;
+            transform: translateY(-2px);
         }
 
-        @media (max-width: 768px) {
-            .hero-section {
-                background-attachment: scroll;
-            }
+        .gallery-card {
+            overflow: hidden;
+            border-radius: 1.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body>
 
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <div class="text-xl font-extrabold text-blue-600">CAMILLO <span class="text-slate-400 font-light">MATH</span></div>
-            <a href="https://wa.me/393896143982" target="_blank" class="bg-green-500 text-white p-2 px-4 rounded-full text-sm font-bold flex items-center gap-2">
-                <i class="fab fa-whatsapp"></i> WhatsApp
-            </a>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-stone-200">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-2xl font-extrabold tracking-tight text-stone-800 uppercase">
+                Mate <span class="text-amber-800">e Fisica</span>
+            </div>
+            <a href="#contatti" class="bg-stone-800 text-white px-5 py-2 rounded-full text-sm font-bold">Contattami</a>
         </div>
     </nav>
 
-    <section id="home" class="hero-section min-h-screen pt-32 pb-20 flex items-center text-white">
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center text-white pt-20">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <span class="bg-yellow-400 text-blue-900 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wider mb-6 inline-block shadow-lg">Lezioni Online Personalizzate</span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight drop-shadow-xl">
-                Studente appassionato di matematica e fisica offre lezioni chiare e personalizzate
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                Il sito <span class="text-amber-400">Mate e Fisica</span>
             </h1>
-            <p class="text-lg md:text-xl opacity-95 mb-10 max-w-2xl mx-auto">
-                Per studenti delle scuole medie e del biennio delle superiori. Spiegazioni semplici, metodo efficace e grande attenzione.
+            <p class="text-xl md:text-2xl mb-10 text-stone-200">
+                Impara a navigare l'universo della scienza con spiegazioni semplici e dirette.
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="#pacchetti" class="btn-vibrant px-10 py-4 rounded-2xl font-black text-lg shadow-xl uppercase">Vedi Prezzi</a>
-                <a href="#contatti" class="bg-white/20 backdrop-blur-md border-2 border-white px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/30 transition">Contattami</a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contatti" class="btn-primary px-10 py-4 rounded-2xl font-bold text-lg shadow-xl">Inizia ora</a>
+                <a href="#gallery" class="bg-white/10 backdrop-blur-md border border-white/30 px-10 py-4 rounded-2xl font-bold text-lg hover:bg-white/20">Esplora Foto</a>
             </div>
         </div>
     </section>
 
-    <section id="chi-sono" class="py-20 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-4xl font-black mb-6 text-blue-900">Chi sono</h2>
-                    <div class="space-y-4 text-slate-700 leading-relaxed text-lg">
-                        <p>Ciao a tutti! Mi chiamo <strong>Camillo</strong> e sono uno studente con una grande passione per la matematica e la fisica. Fin da quando ho iniziato a studiarle, mi ha sempre affascinato il modo in cui riescono a spiegare il mondo che ci circonda, dalle cose più semplici fino ai fenomeni più complessi.</p>
-                        <p>Ho deciso di condividere le mie conoscenze perché credo che capire davvero un argomento sia ancora più bello quando lo si può spiegare agli altri.</p>
-                        <p>Non sono un professore, ma proprio per questo so bene quali possono essere gli ostacoli nello studio: li affronto anche io ogni giorno. Il mio obiettivo è creare un ambiente sereno, dove si possa imparare senza paura di sbagliare.</p>
-                    </div>
+    <section id="gallery" class="py-24 bg-stone-200">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-extrabold text-stone-900 uppercase mb-12">L'Universo in Foto</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-card">
+                    <img src="Pulsar.jpg" alt="Pulsar" class="gallery-img">
+                    <div class="p-4"><p class="font-bold">Le Pulsar</p></div>
                 </div>
-                <div class="order-1 md:order-2 flex justify-center">
-                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-blue-600 rounded-3xl overflow-hidden shadow-2xl rotate-3">
-                         <div class="absolute inset-0 bg-yellow-400/20 mix-blend-overlay"></div>
-                         <i class="fas fa-rocket text-white text-9xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></i>
-                    </div>
+                <div class="gallery-card">
+                    <img src="OIP.jpg" alt="Nebulosa" class="gallery-img">
+                    <div class="p-4"><p class="font-bold">Galassie Remote</p></div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pacchetti" class="py-20 bg-blue-50">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-black text-slate-900">I Miei Pacchetti</h2>
-                <div class="h-2 w-24 bg-yellow-400 mx-auto mt-4 rounded-full"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-slate-300">
-                    <h3 class="text-xl font-bold text-slate-500 mb-2 italic">Standard</h3>
-                    <div class="text-4xl font-black text-blue-600 mb-6">10€ <small class="text-base text-slate-400">/ ora</small></div>
-                    <ul class="space-y-4 mb-8 text-slate-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Lezione 1-a-1</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i> Risoluzione esercizi</li>
-                    </ul>
-                    <a href="https://wa.me/393896143982" class="block text-center py-4 bg-slate-100 rounded-2xl font-bold hover:bg-slate-200 transition">Scegli</a>
-                </div>
-
-                <div class="bg-blue-600 p-8 rounded-3xl shadow-2xl border-b-8 border-blue-800 text-white transform md:scale-110">
-                    <div class="bg-yellow-400 text-blue-900 text-xs font-black px-3 py-1 rounded-full w-fit mb-4 uppercase">Scontato</div>
-                    <h3 class="text-2xl font-bold mb-2 uppercase">5 Ore</h3>
-                    <div class="text-5xl font-black mb-6 italic">45€</div>
-                    <p class="mb-8 opacity-90 font-medium italic">9€ all'ora invece di 10€</p>
-                    <a href="https://wa.me/393896143982" class="block text-center py-4 bg-white text-blue-600 rounded-2xl font-black shadow-lg hover:bg-slate-100 transition uppercase">Inizia ora</a>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-lg border-b-8 border-slate-300">
-                    <h3 class="text-xl font-bold text-slate-500 mb-2 italic">Intensivo</h3>
-                    <div class="text-4xl font-black text-blue-600 mb-6">80€</div>
-                    <p class="mb-8 text-slate-600 font-medium italic">8€ all'ora invece di 10€</p>
-                    <a href="https://wa.me/393896143982" class="block text-center py-4 bg-slate-100 rounded-2xl font-bold hover:bg-slate-200 transition">Scegli</a>
+                <div class="gallery-card">
+                    <img src="gargantua-black.jpg" alt="Buco Nero" class="gallery-img">
+                    <div class="p-4"><p class="font-bold">Gargantua</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contatti" class="py-20 bg-white">
+    <section id="contatti" class="py-24 bg-white">
         <div class="max-w-4xl mx-auto px-6">
-            <div class="bg-blue-600 rounded-[2.5rem] p-8 md:p-12 text-white shadow-3xl">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-4xl font-black mb-4 uppercase leading-tight">Mettiamoci in contatto</h2>
-                    <p class="text-blue-100">Rispondo velocemente sia su WhatsApp che via Email</p>
-                </div>
-                
+            <div class="bg-stone-900 rounded-[3rem] p-10 md:p-16 text-white text-center">
+                <h2 class="text-4xl font-extrabold mb-8 uppercase">Prenota una lezione</h2>
                 <div class="grid md:grid-cols-2 gap-6">
-                    <a href="https://wa.me/393896143982" target="_blank" class="bg-white/10 hover:bg-white/20 p-6 rounded-3xl border border-white/20 flex items-center gap-5 transition group">
-                        <div class="bg-green-500 p-4 rounded-2xl group-hover:rotate-12 transition shadow-lg">
-                            <i class="fab fa-whatsapp text-3xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs uppercase font-bold opacity-70">WhatsApp</p>
-                            <p class="text-lg font-bold">389 614 3982</p>
-                        </div>
+                    <a href="https://wa.me/393896143982" target="_blank" class="flex items-center justify-center gap-4 p-6 bg-green-600 rounded-2xl font-bold text-xl">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
-
-                    <a href="mailto:camillodistefano2010@gmail.com" class="bg-white/10 hover:bg-white/20 p-6 rounded-3xl border border-white/20 flex items-center gap-5 transition group">
-                        <div class="bg-yellow-400 text-blue-900 p-4 rounded-2xl group-hover:rotate-12 transition shadow-lg">
-                            <i class="fas fa-envelope text-3xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs uppercase font-bold opacity-70">Email</p>
-                            <p class="text-sm font-bold truncate">camillodistefano2010@gmail.com</p>
-                        </div>
+                    <a href="mailto:camillodistefano2010@gmail.com" class="flex items-center justify-center gap-4 p-6 bg-amber-800 rounded-2xl font-bold text-xl">
+                        <i class="fas fa-envelope"></i> Email
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 text-center text-slate-400">
-        <p class="font-bold text-slate-600 mb-2 uppercase tracking-widest">Camillo Ripetizioni</p>
-        <p class="text-sm">&copy; 2026 - Matematica e Fisica Biennio</p>
+    <footer class="py-12 text-center text-stone-500 bg-stone-50">
+        <p class="font-bold text-stone-600 uppercase">Mate e Fisica - Camillo</p>
     </footer>
 
 </body>
